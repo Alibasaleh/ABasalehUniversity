@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading University - Master the Markets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#3b82f6',
+                        dark: '#1f2937',
+                        light: '#f9fafb',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .trading-chart {
+            background: linear-gradient(145deg, #ffffff 0%, #f3f4f6 100%);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-chart-line text-blue-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900">Trading University</span>
+                    </div>
+                    <div class="hidden md:block ml-10">
+                        <div class="flex space-x-8">
+                            <a href="#home" class="text-blue-600 hover:text-blue-800 px-3 py-2 font-medium">Home</a>
+                            <a href="#courses" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Courses</a>
+                            <a href="#features" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Features</a>
+                            <a href="#testimonials" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Testimonials</a>
+                            <a href="#pricing" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Pricing</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#enroll" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium transition duration-300">Enroll Now</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-blue-600">Home</a>
+                <a href="#courses" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Courses</a>
+                <a href="#features" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Features</a>
+                <a href="#testimonials" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Testimonials</a>
+                <a href="#pricing" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Pricing</a>
+                <a href="#enroll" class="block px-3 py-2 text-base font-medium bg-blue-600 text-white rounded-md text-center">Enroll Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Master the Markets with Trading University</h1>
+                    <p class="text-xl mb-8 text-blue-100">Learn from industry experts and transform your trading skills with our comprehensive courses designed for all experience levels.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#enroll" class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-md font-bold text-center transition duration-300">Start Learning Today</a>
+                        <a href="#courses" class="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-md font-bold text-center transition duration-300">Explore Courses</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="trading-chart p-4 w-full max-w-md">
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-2">
+                                    <i class="fas fa-chart-line text-blue-600"></i>
+                                </div>
+                                <span class="font-bold text-gray-800">Trading Simulator</span>
+                            </div>
+                            <div class="text-sm text-gray-600">Live Demo</div>
+                        </div>
+                        <div class="bg-gray-100 rounded-lg p-4 mb-4">
+                            <div class="h-48 bg-white rounded" id="trading-chart"></div>
+                        </div>
+                        <div class="flex justify-between">
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">Buy</button>
+                            <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium">Sell</button>
+                            <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-md text-sm font-medium">Analyze</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">10,000+</div>
+                    <div class="text-gray-600">Students Enrolled</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">50+</div>
+                    <div class="text-gray-600">Expert Instructors</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">100+</div>
+                    <div class="text-gray-600">Trading Strategies</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">24/7</div>
+                    <div class="text-gray-600">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Comprehensive Trading Courses</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">From beginner to advanced levels, we have the perfect course to elevate your trading skills.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden course-card transition duration-300">
+                    <div class="bg-blue-600 p-4 text-white">
+                        <h3 class="text-xl font-bold">Beginner Trading</h3>
+                        <p class="text-blue-100">Start your trading journey</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-clock text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">4 Weeks</span>
+                        </div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Market fundamentals</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Basic chart reading</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Risk management basics</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Demo account setup</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-gray-900">$199</span>
+                            <a href="#enroll" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden course-card transition duration-300">
+                    <div class="bg-blue-700 p-4 text-white">
+                        <h3 class="text-xl font-bold">Intermediate Trading</h3>
+                        <p class="text-blue-100">Enhance your skills</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-clock text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">6 Weeks</span>
+                        </div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Technical analysis</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Advanced indicators</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Trading psychology</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Strategy development</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-gray-900">$349</span>
+                            <a href="#enroll" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden course-card transition duration-300">
+                    <div class="bg-blue-800 p-4 text-white">
+                        <h3 class="text-xl font-bold">Advanced Trading</h3>
+                        <p class="text-blue-100">Master the markets</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-clock text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">8 Weeks</span>
+                        </div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Algorithmic trading</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Options strategies</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Portfolio management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Live trading sessions</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-gray-900">$599</span>
+                            <a href="#enroll" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#courses" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+                    View all courses <i class="fas fa-chevron-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Trading University?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We provide the most comprehensive trading education with practical, real-world applications.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chalkboard-teacher text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Instructors</h3>
+                    <p class="text-gray-600">Learn from professional traders with years of market experience and proven track records.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-laptop-code text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Interactive Platform</h3>
+                    <p class="text-gray-600">Our state-of-the-art trading simulator lets you practice strategies risk-free with real market data.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Community Support</h3>
+                    <p class="text-gray-600">Join our exclusive community of traders to share ideas, strategies, and get feedback.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-certificate text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Certification</h3>
+                    <p class="text-gray-600">Earn recognized certifications that validate your trading knowledge and skills.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-mobile-alt text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Mobile Learning</h3>
+                    <p class="text-gray-600">Access courses anytime, anywhere with our mobile-friendly platform and app.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-hand-holding-usd text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Money-Back Guarantee</h3>
+                    <p class="text-gray-600">Not satisfied? We offer a 30-day money-back guarantee on all our courses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Hear from our students who transformed their trading careers.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <span class="text-blue-600 font-bold">JD</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">John D.</h4>
+                            <p class="text-gray-600 text-sm">Forex Trader</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-700 mb-4">
+                        "The beginner course completely changed my perspective on trading. I went from losing money to consistently profitable within 3 months."
+                    </div>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <span class="text-blue-600 font-bold">SM</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Sarah M.</h4>
+                            <p class="text-gray-600 text-sm">Stock Trader</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-700 mb-4">
+                        "The technical analysis modules were game-changing. I now have a systematic approach to trading that has increased my win rate significantly."
+                    </div>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <span class="text-blue-600 font-bold">RK</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Robert K.</h4>
+                            <p class="text-gray-600 text-sm">Options Trader</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-700 mb-4">
+                        "The advanced options strategies course paid for itself in the first month. The instructors' real-world experience shines through in every lesson."
+                    </div>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Options</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Choose the plan that fits your learning goals and budget.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden border border-gray-200">
+                    <div class="p-6 border-b border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Basic</h3>
+                        <p class="text-gray-600 mb-4">Perfect for beginners</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-gray-900">$99</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                        <a href="#enroll" class="block bg-gray-200 hover:bg-gray-300 text-gray-800 text-center py-3 rounded-md font-medium transition duration-300">Get Started</a>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Access to beginner courses</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Community forum access</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Weekly Q&A sessions</span>
+                            </li>
+                            <li class="flex items-start text-gray-400">
+                                <i class="fas fa-times mt-1 mr-2"></i>
+                                <span>Advanced courses</span>
+                            </li>
+                            <li class="flex items-start text-gray-400">
+                                <i class="fas fa-times mt-1 mr-2"></i>
+                                <span>Live trading rooms</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Pro Plan -->
+                <div class="bg-white rounded-xl overflow-hidden border-2 border-blue-600 shadow-lg transform scale-105">
+                    <div class="bg-blue-600 text-white p-2 text-center text-sm font-medium">
+                        MOST POPULAR
+                    </div>
+                    <div class="p-6 border-b border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Pro</h3>
+                        <p class="text-gray-600 mb-4">For serious traders</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-gray-900">$199</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                        <a href="#enroll" class="block bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-md font-medium transition duration-300">Get Started</a>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>All beginner & intermediate courses</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Priority community access</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Daily Q&A sessions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Live trading rooms</span>
+                            </li>
+                            <li class="flex items-start text-gray-400">
+                                <i class="fas fa-times mt-1 mr-2"></i>
+                                <span>Advanced courses</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Elite Plan -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden border border-gray-200">
+                    <div class="p-6 border-b border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Elite</h3>
+                        <p class="text-gray-600 mb-4">For professional traders</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-gray-900">$399</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                        <a href="#enroll" class="block bg-gray-200 hover:bg-gray-300 text-gray-800 text-center py-3 rounded-md font-medium transition duration-300">Get Started</a>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>All courses (beginner to advanced)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>VIP community access</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>24/7 mentor support</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Exclusive trading tools</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>1-on-1 coaching sessions</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-4">Need a custom solution for your team?</p>
+                <a href="#contact" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+                    Contact us for enterprise plans <i class="fas fa-chevron-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="enroll" class="py-20 hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-6">Ready to Transform Your Trading?</h2>
+                    <p class="text-xl mb-8 text-blue-100">Join thousands of successful traders who started their journey with Trading University.</p>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-2xl mr-3 text-green-300"></i>
+                        <span>30-day money-back guarantee</span>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white rounded-lg p-8 shadow-xl">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Enroll Now</h3>
+                        <form id="enrollment-form">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-6">
+                                <label for="course" class="block text-gray-700 font-medium mb-2">Select Course</label>
+                                <select id="course" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option value="">Choose a course</option>
+                                    <option value="beginner">Beginner Trading ($199)</option>
+                                    <option value="intermediate">Intermediate Trading ($349)</option>
+                                    <option value="advanced">Advanced Trading ($599)</option>
+                                    <option value="pro">Pro Membership ($199/month)</option>
+                                    <option value="elite">Elite Membership ($399/month)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-bold transition duration-300">Enroll Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600">Find answers to common questions about Trading University.</p>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left">
+                        <h3 class="text-lg font-medium text-gray-900">Do I need any prior trading experience?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-gray-600">No prior experience is needed for our beginner courses. We start from the very basics and gradually build up your trading knowledge. Our curriculum is designed to take you from complete novice to confident trader.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left">
+                        <h3 class="text-lg font-medium text-gray-900">How much time do I need to dedicate?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-gray-600">We recommend dedicating at least 5-10 hours per week to get the most out of our courses. However, all our content is self-paced, so you can move faster or slower depending on your schedule and learning style.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left">
+                        <h3 class="text-lg font-medium text-gray-900">What markets do you cover?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-gray-600">Our curriculum covers stocks, forex, options, futures, and cryptocurrencies. We teach universal trading principles that can be applied across all markets, as well as market-specific strategies and techniques.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left">
+                        <h3 class="text-lg font-medium text-gray-900">Do you offer any certification?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-gray-600">Yes, upon successful completion of each course level (beginner, intermediate, advanced), you'll receive a certificate that verifies your trading education. These certificates are recognized in the trading community.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left">
+                        <h3 class="text-lg font-medium text-gray-900">What if I'm not satisfied with the course?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-gray-600">We offer a 30-day money-back guarantee on all our courses. If you're not completely satisfied with your purchase, simply contact our support team within 30 days for a full refund, no questions asked.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-4">Still have questions?</p>
+                <a href="#contact" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+                    Contact our support team <i class="fas fa-chevron-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <!-- Column 1 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Trading University</h3>
+                    <p class="text-gray-400 mb-4">Empowering traders with knowledge, skills, and confidence to succeed in financial markets.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Column 2 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Courses</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Beginner Trading</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Intermediate Trading</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Advanced Trading</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Options Mastery</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Forex Fundamentals</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Trading Glossary</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Market Analysis</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Webinars</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Free Courses</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">123 Trading St, Market City, NY 10001</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">support@tradinguniversity.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Trading University. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Trading Chart Simulation -->
+    <script>
+        // Simple trading chart simulation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // FAQ accordion
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('transform');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+            
+            // Enrollment form submission
+            const enrollmentForm = document.getElementById('enrollment-form');
+            
+            if (enrollmentForm) {
+                enrollmentForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your interest! Our team will contact you shortly with enrollment details.');
+                    this.reset();
+                });
+            }
+            
+            // Simple trading chart animation
+            const chartData = [
+                100, 102, 105, 103, 107, 110, 108, 112, 115, 113, 
+                117, 120, 118, 122, 125, 123, 127, 130, 128, 132
+            ];
+            
+            const chartElement = document.getElementById('trading-chart');
+            
+            if (chartElement) {
+                // Create a simple SVG chart
+                const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                svg.setAttribute("width", "100%");
+                svg.setAttribute("height", "100%");
+                svg.setAttribute("viewBox", "0 0 300 150");
+                
+                // Create path for the chart line
+                const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                let pathData = `M 0 ${150 - chartData[0]}`;
+                
+                for (let i = 1; i < chartData.length; i++) {
+                    const x = (i / (chartData.length - 1)) * 300;
+                    const y = 150 - chartData[i];
+                    pathData += ` L ${x} ${y}`;
+                }
+                
+                path.setAttribute("d", pathData);
+                path.setAttribute("fill", "none");
+                path.setAttribute("stroke", "#3b82f6");
+                path.setAttribute("stroke-width", "2");
+                
+                svg.appendChild(path);
+                chartElement.appendChild(svg);
+                
+                // Animate the chart
+                path.style.strokeDasharray = path.getTotalLength();
+                path.style.strokeDashoffset = path.getTotalLength();
+                
+                setTimeout(() => {
+                    path.style.transition = "stroke-dashoffset 2s ease-in-out";
+                    path.style.strokeDashoffset = "0";
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>
